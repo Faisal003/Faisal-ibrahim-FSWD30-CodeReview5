@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dating Web</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="logo" ><img src="img/logo.png" alt="coders dating logo"></div>
+	<div class="background">
+		<img src="http://img.zeit.de/kultur/2017-06/liebe-bundestagswahl/wide__820x461__desktop" alt="Welcome to our website image">
+    <div class="welcome">
+        <p>Welcome to<br> our website</p>
+    </div>
+</div>
+
+ <script>
+var Persons =[{
+                name: 'Shahir',
+                surname: 'Hamidy',
+                favoritePerformers: ["Justin Timberlake", "Ed Sheeran", "Emma Watson"],
+                age: 25,
+                myPhoto: "img/boy02.jpg", 
+                likes: 5,
+                numberoflikes: function (i){
+                    likes = this.likes + 1;
+                    document.getElementById('0').innerHTML= likes ;
+                }
+            },{
+                name: 'Shabeer',
+                surname: 'Hamidy',
+                favoritePerformers:["Skillet","Linkin Park","Ed Sheeran"],
+                age: 22,
+                myPhoto: "img/shabir.jpg",
+                likes:2,
+                numberoflikes: function (i){
+                    likes = this.likes + 1;
+                    document.getElementById('1').innerHTML= likes ;
+                }
+            },{
+                name: 'Shahzad',
+                surname: 'Hamidy',
+                favoritePerformers:["Shakira","Emma Watson","Logan Poul"],
+                age: 16,
+                myPhoto: "img/shahzad.jpg",
+                likes:10,
+                numberoflikes: function (i){
+                    likes = this.likes + 1;
+                    document.getElementById('2').innerHTML= likes ;
+                }
+            },{
+                name: 'Shahed',
+                surname: 'Hamidy',
+                favoritePerformers: ["Justin Timberlake", "Ed Sheeran", "Emma Watson"],
+                age: 14,
+                myPhoto: "img/shahed.jpg",
+                likes: 22,
+                numberoflikes: function (i){
+                    likes = this.likes + 1;
+                    document.getElementById('3').innerHTML= likes ;
+                }
+            },{
+                name: 'Maxina',
+                surname: 'Musterman',
+                favoritePerformers: ["Justin Timberlake", "Ed Sheeran", "Emma Watson"],
+                age: 30,
+                myPhoto: "img/girl02.jpg", 
+                likes: 9,
+                numberoflikes: function (i){
+                    likes = this.likes + 1;
+                    document.getElementById('4').innerHTML= likes ;
+                }
+            },{
+                name: 'Max',
+                surname: 'Musterman',
+                favoritePerformers: ["Justin Timberlake", "Ed Sheeran", "Emma Watson"],
+                age: 23,
+                myPhoto: "img/girl01.jpg", 
+                likes: 30,
+                numberoflikes: function (i){
+                    likes = this.likes + 1;
+                    document.getElementById('5').innerHTML= likes ;
+                }
+            }];
+
+document.write("<div class='Persons'>");
+for (var i=0;i<Persons.length;i++){
+    document.write("<div class='person"+i+"'>");
+    document.write("<img src='"+Persons[i].myPhoto+"'>");
+    document.write("Name : "+Persons[i].name+"<br>");
+    document.write("Surname : "+Persons[i].surname+"<br>");
+    document.write("Age : "+Persons[i].age+"<br>");
+    document.write("<button onclick='return numberoflikes["+i+"]'>Like</button><br>");
+    document.write("<img id='heartmini' src='img/heart.svg.png'>");
+    document.write("<p id='"+i+"' style='color:red'>"+Persons[i].likes+"</p><br>");
+    document.write("</div>");
+}
+
+document.write("</div><br><br><hr>");
+</script>
+	<footer>
+        <p align="center"><img src="img/footer.png" width="500"></p>   
+    </footer>
+
+</body>
+</html>
